@@ -17,7 +17,6 @@ public class PongPanel extends JPanel {
 
         this.setPreferredSize(new Dimension(PANEL_LENGTH, PANEL_HEIGHT));
         this.setBackground(Color.BLACK);
-
     }
 
     @Override
@@ -28,5 +27,17 @@ public class PongPanel extends JPanel {
         paddle1.draw(graphics);
         paddle2.draw(graphics);
         ball.draw(graphics);
+    }
+
+    public Paddle getPaddle1() {
+        return paddle1;
+    }
+
+    public Paddle getPaddle2() {
+        return paddle2;
+    }
+
+    public Ball getBall() {
+        return ball;
     }
 }
