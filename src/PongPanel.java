@@ -7,4 +7,15 @@ public class PongPanel extends JPanel {
         this.setPreferredSize(new Dimension(500, 500));
         this.setBackground(Color.BLACK);
     }
+
+    @Override
+    public void paint(Graphics g){
+        super.paint(g);
+
+        Graphics2D graphics = (Graphics2D) g;
+        g.setColor(Color.white);
+
+        g.fillRect(10, 10, 20, 120);
+
+    }
 }

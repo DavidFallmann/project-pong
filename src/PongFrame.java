@@ -2,8 +2,6 @@ import javax.swing.*;
 
 public class PongFrame extends JFrame {
 
-    PongPanel panel;
-
     PongFrame(){
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
         this.add(new PongPanel());
