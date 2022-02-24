@@ -3,7 +3,7 @@ import java.awt.*;
 public class Paddle {
 
     public static final int PADDLE_LENGTH = 20;
-    public static final int PADDLE_HEIGHT = 120;
+    public static final int PADDLE_HEIGHT = 125;
     public static final int PADDLE_VELOCITY = 25;
 
     private int xCoord;
@@ -28,11 +28,15 @@ public class Paddle {
     }
 
     public void goUp() {
-        yCoord -= PADDLE_VELOCITY;
+        if (yCoord > 0) {
+            yCoord -= PADDLE_VELOCITY;
+        }
     }
 
     public void goDown() {
-        yCoord += PADDLE_VELOCITY;
+        if (yCoord + PADDLE_HEIGHT < PongPanel.PANEL_HEIGHT) {
+            yCoord += PADDLE_VELOCITY;
+        }
     }
 
     public int getxCoord() {
